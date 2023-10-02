@@ -1,0 +1,35 @@
+1)
+
+CONCAT(COLUMN1, COLUMN2) AS ALIAS_NAME;
+Combina i valori delledue colonne specificate, creando una singola stringa , ed inoltre l'AS assegna un nome alla nuova colonna.
+
+LOWER(COLUMN) AS lowerCase_Column;
+Converte tutti i caratteri nella colonna specificata in minuscolo.
+
+UPPER(COLUMN) AS upperCase_Column;
+Converte tutti i caratteri nella colonna specificata in maiuscolo.
+
+TRIM(COLUMN) AS trimmed_Column;
+Rimuove gli spazi in eccesso nella colonna.
+
+LENGTH(COLUMN) AS length_Column;
+Restituisce la lunghezza del contenuto della colonna.
+
+SUBSTRING(COLUMN, START, LENGTH) AS substringResult_Column;
+Prende i valori della colonna e restituisce una stringa partendo  dal valore START e prende come ultimo valore LENGTH.
+
+ROUND(COLUMN, DECIMAL_PLACES) AS rounded_Column;
+Arrotonda il valore numerico nella colonna specificata al numero di decimali desiderato.
+
+DATE_ADD(COLUMN, INTERVAL EXPRESSION UNIT) AS dateAfterAdd_Column;
+Aggiunge l'intervallo specificato al valore della data o dell'orario nella colonna .
+
+DATE_SUB(COLUMN, INTERVAL EXPRESSION UNIT)AS dateAfterSub_Column;
+ Sottrae un intervallo specificato dalla data o dall'orario nella colonna .
+
+FORMAT(COLUMN, FORMAT_STRING)AS formatted_Column;
+Formatta il contenuto della colonna specificata secondo il formato specificato nella stringa (FORMAT_STRING).
+
+2)
+
+SELECT TIMESTAMP(DATE_SUB(DATE_ADD(DATE_ADD(NOW(), INTERVAL 7 DAY), INTERVAL 8 MONTH), INTERVAL 3 YEAR), '18:00:00') AS BIRTHDAY_DATE;
